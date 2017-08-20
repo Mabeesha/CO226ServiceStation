@@ -1,0 +1,45 @@
+mysql> CREATE TABLE ownerInfo(
+    -> owner_id VARCHAR(10) NOT NULL,
+    -> owner_name VARCHAR(50) NOT NULL,
+    -> owner_phoneno VARCHAR(10) NOT NULL,
+    -> owner_username VARCHAR(20) NOT NULL,
+    -> owner_password VARCHAR(20) NOT NULL,
+    -> PRIMARY KEY (owner_id));
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> CREATE TABLE stationInfo(
+    -> station_id INT NOT NULL AUTO_INCREMENT,
+    -> station_name VARCHAR(25),
+    -> station_phoneno VARCHAR(10),
+    -> owner_id INT NOT NULL,
+    -> PRIMARY KEY(station_id),
+    -> FOREIGN KEY(owner_id) REFERENCES ownerInfo(owner_id));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE stationLocation(
+    -> station_id INT NOT NULL,
+    -> location_postal VARCHAR(5),
+    -> location_address1 VARCHAR(20),
+    -> location_address2 VARCHAR(20),
+    -> location_city VARCHAR(20),
+    -> PRIMARY KEY (station_id),
+    -> FOREIGN KEY (station_id) REFERENCES stationInfo(station_id));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE stationStatus(
+    -> station_id INT NOT NULL,
+    -> status_free BOOLEAN,
+    -> status_busy BOOLEAN,
+    -> status_lastupdated DATETIME
+    -> PRIMARY KEY (station_id),
+    -> FOREIGN KEY (station_id) REFERENCES stationInfo(station_id));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE stationSpecs(
+    -> station_id INT NOT NULL,
+    -> spec_light BOOLEAN,
+    -> spec_heavy BOOLEAN,
+    -> spec_all BOOLEAN,
+    -> PRIMARY KEY (station_id),
+    -> FOREIGN KEY (station_id) REFERENCES stationInfo(station_id));
+Query OK, 0 rows affected (0.06 sec)
