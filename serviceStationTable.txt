@@ -26,6 +26,21 @@ create table serviceStationInfo
     user_name VARCHAR(25),
     acc_password VARCHAR(8),
     PRIMARY KEY(station_id));
+    
+    
+    
+create table serviceStationInfo
+    (station_id INT NOT NULL AUTO_INCREMENT,
+    station_name VARCHAR(25),
+    station_location VARCHAR(50),
+    station_specs ENUM ('All','Light Vehicles','Heavy Vehicles'),
+    
+    station_state ENUM ('Free','Busy'),
+    
+    contact_num INT,
+    user_name VARCHAR(25),
+    acc_password VARCHAR(8),
+    PRIMARY KEY(station_id));
 
 INSERT INTO serviceStationInfo VALUES ('001','Car Clean','Dangolla,Kandy','All','Free','075235','user1','123');
 
