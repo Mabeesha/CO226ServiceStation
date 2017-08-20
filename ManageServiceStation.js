@@ -1,6 +1,3 @@
-$("#btnNewUser").click(
-	function() {
-		location.href = "SignUp.html";
-	}
-);
-
+$("#signOutBtn").click(function() {
+	location.href = "SignIn.html";
+});

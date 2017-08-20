@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Service Stations</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style_serviceStationList.css">
+</head>
+<body>
+	<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" align="center">
+  		<thead>
+   		<tr>
+     		<th class="mdl-data-table__cell--non-numeric">Service Station</th>
+     		<th>Free Slots</th>
+      		<th>Total Slots</th>
+    	</tr>
+ 		</thead>
+ 		<tbody id="table_body">
+  		</tbody>
+</table>
+
+	<script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyD0l-q-z-OsuYdnZAA5Mj06Q__nudt9Dsk",
+	    authDomain: "smart-service-60c94.firebaseapp.com",
+	    databaseURL: "https://smart-service-60c94.firebaseio.com",
+	    projectId: "smart-service-60c94",
+	    storageBucket: "smart-service-60c94.appspot.com",
+	    messagingSenderId: "436813529632"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="ServiceStationList.js"></script>
+</body>
+</html>
