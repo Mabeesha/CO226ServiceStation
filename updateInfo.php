@@ -1,0 +1,43 @@
+
+
+<?php
+// ================ change the db =============================
+         $database= 'co226project';
+//
+ $db = mysqli_connect('localhost','root','',$database)
+ or die('Error connecting to MySQL server.');
+// ================ change the table =============================
+        $table1 ='serviceStationInfo';
+     
+	$stationName=$_GET['station-name'];
+    $state=$_GET['status'];
+    
+    
+
+  	$query = "UPDATE $table1 SET station_state='$state' WHERE station_name='$stationName'";//
+	mysqli_query($db, $query) or die ('Error querying the DB.');
+
+	$result = mysqli_query($db, $query);
+    if(!$result){
+             echo "<script>
+                alert('Value Not Updated');
+                    window.location.href='updateInfo.html';
+                        </script>";
+     }
+    else{
+            echo "<script>
+                alert('Value Successfully Updated');
+                    window.location.href='updateInfo.html';
+                        </script>";
+    }
+      
+
+
+                
+
+
+
+?>
+
+
+

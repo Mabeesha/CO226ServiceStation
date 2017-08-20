@@ -1,6 +1,8 @@
 <?php
 // ================ change the db =============================
- $db = mysqli_connect('localhost','root','','ServiceStations')
+    $database= 'co226project';
+//
+ $db = mysqli_connect('localhost','root','',$database)
  or die('Error connecting to MySQL server.');
 ?>
 
@@ -10,13 +12,23 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
 	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+         
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="ServiceStationList.js"></script>
      
  </head>
+<div class="box-content" >
+
+    <button id="btnHome"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Home</button>
+    </div>
  <body>
 
 <?php
      // ================ change the table =============================
-	$query = "SELECT * FROM stationInfo";
+        $table1 ='serviceStationInfo';
+     
+     //
+	$query = "SELECT * FROM $table1";
 	mysqli_query($db, $query) or die ('Error querying the DB.');
 	$result = mysqli_query($db, $query);
      
@@ -31,6 +43,7 @@
     echo "</tbody></table>";
 
 ?>
-
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="ServiceStationList.js"></script>
 </body>
 </html>

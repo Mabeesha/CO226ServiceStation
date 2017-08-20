@@ -9,14 +9,33 @@
 			$station_name = $_GET["station-name"];
             $station_location = $_GET["station-loc"];
             $contact_num = $_GET["contact-num"];
+            $station_specs = $_GET["Specifications"];
+            
             $user_name = $_GET["user-name"];
             $acc_password = $_GET["acc-password"];
             
-            //$db = mysqli_connect('localhost','root','','ServiceStations')
-            //        or die('Error connecting to MySQL server.');
             
-            // ========== make the link to db and add the query here ! ========================
-	
+	       // ================ change the db =============================
+            $database= 'co226project';
+            //
+            $db = mysqli_connect('localhost','root','',$database)
+            or die('Error connecting to MySQL server.');
+            
+             // ================ change the table =============================
+            $table1 ='serviceStationInfo';
+ 
+            $insert="INSERT INTO $table1 VALUES (DEFAULT,'$station_name','$station_location','$station_specs','Free','$contact_num','$user_name','$acc_password')";
+            
+            if(!mysqli_query($db,$insert)){
+                echo 'not inserted';
+            }
+            else{
+                echo 'inserted';
+                 header("Location: ServiceStationList.php ");
+   exit;
+            }            
+
+            
 		}else{
 			echo "Please Input Values";
 		}
