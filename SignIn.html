@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign In</title>
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style_signup.css">
+    
+</head>
+<body>
+    
+	<div class="mdl-card mdl-shadow--2dp demo-card-wide">
+        <div class="mdl-card__supporting-text">
+            Hi, Login to your Account<br><br>
+            
+            <form action="signin.php">
+                
+                <table>
+                
+                    <tr>
+                        <th width = "350">Account Information</th>
+                        <th width = "350"></th>
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" id="sample3" name="user-name">
+                            <label class="mdl-textfield__label" for="sample3">User Name</label>
+                            </div>                            
+                        </td>
+                        
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                    
+                        <td>
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="password" id="sample3" name="acc-password">
+                            <label class="mdl-textfield__label" for="sample3">Password</label>
+                            </div>
+                        </td>
+                        
+                        
+                        <th>
+                            
+                            
+                        
+                        </th>
+                        
+                    </tr>
+                    
+                    <tr>
+                        <td>
+                            <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">
+                                Log In
+                            </button>
+                        </td>
+                        
+                        <td>
+                            
+                        </td>
+                    </tr>                
+                </table>                   
+    
+            </form><br>
+            
+            
+            New to our Service ? Create an Account Now !<br><br>
+            
+            <button id="btnSignUp"class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Create Account</button>
+            
+        </div>  
+    </div>   
+    
+
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src="signin.js"></script>
+
+</body>
+</html>

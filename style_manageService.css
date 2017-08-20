@@ -1,0 +1,42 @@
+.login-cover {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginProgress {
+	display: none;
+}
+#loginError {
+	display: none;
+}
+
+.demo-card-wide.mdl-card {
+  margin: 50px;
+  width: 300px;
+}
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  height: auto;
+  background: #46B6AC;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #fff;
+}
+.demo-card-wide > .mdl-card__supporting-text{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 40px;
+}
+#btnForgotPassword {
+    text-transform: none;
+    font-variant-caps: normal;
+    font-size: 10px;
+}
